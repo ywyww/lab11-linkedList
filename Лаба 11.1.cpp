@@ -4,22 +4,22 @@
 #include <Windows.h>
 using namespace std;
 
-struct Student {								// однонаправленный список
+struct Student {							// однонаправленный список
 	char name[256];
 	Student* ptrNext;
 };
 
 Student* head = NULL;
 int n = 0;
-bool flag1 = false;								// проверка, создан ли список или нет
+bool flag1 = false;							// проверка, создан ли список или нет
 
-Student* create(const int);			// Создание однонаправленного списка
+Student* create(const int);						// Создание однонаправленного списка
 void deleteNode(const int, int&);					// Удаление элемента
-void insertDoubles(const int, int);				// Добавление элементов по два
+void insertDoubles(const int, int);					// Добавление элементов по два
 void insertNode(const int, int&);					// Добавление элемента
 void fill();								// заполнение списка ключами (вводится с клавиатуры)
 void print();								// вывод списка на консоль
-void writeToFile(FILE*);							// запись в файл
+void writeToFile(FILE*);						// запись в файл
 void destroy();								// уничтожение списка
 void restoreFromFile(FILE*);						// восстановление из файла
 void menu(const int);							// непосредственно меню
